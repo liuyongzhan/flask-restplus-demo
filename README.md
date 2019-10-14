@@ -5,9 +5,13 @@
     pip install flask-bcrypt flask-restplus Flask-Migrate pyjwt Flask-Script flask_testing gunicorn
     
     pip freeze > requirements.txt
- 
-### 测试
-    make tests
+
+### 初始化数据库
+    修改app/main目录下的dev_db.py文件中的数据库连接配置。
+    然后执行数据库迁移操作：
+    python manage.py db init
+    python manage.py db migrate
+    python manage.py db upgrade
 
 ### 运行
     make run 或者 python manage.py run
